@@ -9,12 +9,29 @@ const CV = () => (
   <>
     <CVWrapper>
       <Paper>
+        <PageNumber>1</PageNumber>
         <MainContent>
           <Header />
           <ProfessionalExperienceSection />
           <EducationSection />
           <PersonalProjectsSection />
         </MainContent>
+        <OnlineCVLink>
+          Visit this CV online at&nbsp;
+          <a href="https://cv.joealden.com">https://cv.joealden.com</a>
+        </OnlineCVLink>
+      </Paper>
+      <Paper>
+        <PageNumber>2</PageNumber>
+        <MainContent>
+          <Header />
+          <SelfStudySection />
+          <InterestsSection />
+        </MainContent>
+        <OnlineCVLink>
+          Visit this CV online at&nbsp;
+          <a href="https://cv.joealden.com">https://cv.joealden.com</a>
+        </OnlineCVLink>
       </Paper>
     </CVWrapper>
     <GlobalStyles />
@@ -25,7 +42,8 @@ export default CV;
 
 const CVWrapper = styled.main`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Paper = styled.div`
@@ -33,11 +51,52 @@ const Paper = styled.div`
   border: 1px solid black;
   width: 100%;
   max-width: 1240px;
-  min-height: 1754px;
+  min-width: 1240px;
+  height: 1779px;
+  position: relative;
+`;
+
+const PageNumber = styled.div`
+  display: none;
+
+  @media print {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px 12px;
+    font-size: 1.2rem;
+    background-color: lightgrey;
+  }
 `;
 
 const MainContent = styled.div`
   margin: 30px;
+  position: relative;
+
+  > span {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+`;
+
+const OnlineCVLink = styled.div`
+  display: none;
+
+  @media print {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 8px 12px;
+    font-size: 1.2rem;
+    background-color: lightgrey;
+
+    a {
+      color: black;
+    }
+  }
 `;
 
 const Header = () => (
@@ -45,7 +104,9 @@ const Header = () => (
     <div>
       <div>
         <h1>Joe Alden</h1>
-        <h2>me@joealden.com</h2>
+        <h2>
+          <a href="mailto:me@joealden.com">me@joealden.com</a>
+        </h2>
       </div>
       <div>
         <div>
@@ -78,6 +139,16 @@ const HeaderWrapper = styled.header`
   flex-direction: column;
   margin-top: 50px;
 
+  a {
+    color: #9b9b9b;
+    display: block;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: black;
+    }
+  }
+
   > div {
     display: flex;
     justify-content: space-between;
@@ -104,14 +175,7 @@ const HeaderWrapper = styled.header`
         color: black;
 
         a {
-          color: grey;
-          display: block;
           margin-left: 5px;
-          transition: color 0.3s ease;
-
-          &:hover {
-            color: black;
-          }
         }
       }
     }
@@ -286,17 +350,25 @@ const PersonalProjectsSection = () => (
       <ItemSubSection>
         <ItemSubSectionHeading>
           <h4>
-            <span>Listed</span> - Design Resource Site (
+            <span>Talq</span> - A Real Time Communication Platform (
             <a
-              href="https://listed.design"
+              href="https://talq.joealden.com"
               rel="noreferrer noopener"
               target="_blank"
             >
-              https://listed.design
+              https://talq.joealden.com
+            </a>
+            &nbsp;&amp;&nbsp;
+            <a
+              href="https://talq-api.joealden.com"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              https://talq-api.joealden.com
             </a>
             )
           </h4>
-          <span>Q4 2018 - Jan 2019</span>
+          <span>Q3 2018</span>
         </ItemSubSectionHeading>
         <ItemSubSectionList>
           <ul>
@@ -309,13 +381,13 @@ const PersonalProjectsSection = () => (
       <ItemSubSection>
         <ItemSubSectionHeading>
           <h4>
-            <span>Umoro</span> - E-commerce Site (
+            <span>px-to-vw</span> - A Pixel to Viewport Width Converter (
             <a
-              href="https://umoro.com"
+              href="https://vw.joealden.com"
               rel="noreferrer noopener"
               target="_blank"
             >
-              https://umoro.com
+              https://vw.joealden.com
             </a>
             )
           </h4>
@@ -326,6 +398,366 @@ const PersonalProjectsSection = () => (
             <li>What I did</li>
             <li>What I did</li>
             <li>What I did</li>
+          </ul>
+        </ItemSubSectionList>
+      </ItemSubSection>
+      <ItemSubSection>
+        <ItemSubSectionHeading>
+          <h4>
+            <span>Corum</span> - A Community Moderated Forum (
+            <a
+              href="https://corum.joealden.com"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              https://corum.joealden.com
+            </a>
+            )
+          </h4>
+          <span>Q3 2017 - Q1 2018</span>
+        </ItemSubSectionHeading>
+        <ItemSubSectionList>
+          <ul>
+            <li>What I did</li>
+            <li>What I did</li>
+            <li>What I did</li>
+          </ul>
+        </ItemSubSectionList>
+      </ItemSubSection>
+    </Item>
+  </Section>
+);
+
+/* ------------------------------ Page 2 -------------------------- */
+
+const SelfStudySection = () => (
+  <Section>
+    <h3>Self Study</h3>
+    <Item>
+      <ItemHeading>
+        <div>
+          <h4>Online Courses</h4>
+          <span>(2015 - 2018)</span>
+        </div>
+      </ItemHeading>
+      <ItemSubSection>
+        <ItemSubSectionHeading>
+          <h4>
+            <span>FrontendMasters</span> - (
+            <a
+              href="https://frontendmasters.com/"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              https://frontendmasters.com
+            </a>
+            )
+          </h4>
+          <span>2017 - 2018</span>
+        </ItemSubSectionHeading>
+        <ItemSubSectionList>
+          <ul>
+            <li>
+              Introduction to Vue.js - (
+              <a
+                href="https://twitter.com/sarah_edo"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                Sarah Drasner
+              </a>
+              )
+            </li>
+            <li>
+              Functional-Light JavaScript, v2 - (
+              <a
+                href="https://twitter.com/getify"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                Kyle Simpson
+              </a>
+              )
+            </li>
+            <li>
+              Deep JavaScript Foundations - (
+              <a
+                href="https://twitter.com/getify"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                Kyle Simpson
+              </a>
+              )
+            </li>
+            <li>
+              Rethinking Asynchronous JavaScript - (
+              <a
+                href="https://twitter.com/getify"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                Kyle Simpson
+              </a>
+              )
+            </li>
+            <li>
+              Advanced React Patterns - (
+              <a
+                href="https://twitter.com/kentcdodds"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                Kent C. Dodds
+              </a>
+              )
+            </li>
+            <li>
+              TypeScript Fundamentals - (
+              <a
+                href="https://twitter.com/michaellnorth"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                Mike North
+              </a>
+              )
+            </li>
+          </ul>
+        </ItemSubSectionList>
+      </ItemSubSection>
+      <ItemSubSection>
+        <ItemSubSectionHeading>
+          <h4>
+            <span>EggHead</span> - (
+            <a
+              href="https://egghead.io/"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              https://egghead.io
+            </a>
+            )
+          </h4>
+          <span>2017 - 2018</span>
+        </ItemSubSectionHeading>
+        <ItemSubSectionList>
+          <ul>
+            <li>
+              Flexbox Fundamentals - (
+              <a
+                href="https://twitter.com/garthdb"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                Garth Braithwaite
+              </a>
+              )
+            </li>
+            <li>
+              Build Complex Layouts with CSS Grid Layout - (
+              <a
+                href="https://twitter.com/alan0buchanan"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                Rory Smith
+              </a>
+              )
+            </li>
+            <li>
+              The Beginner's Guide to React - (
+              <a
+                href="https://twitter.com/kentcdodds"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                Kent C. Dodds
+              </a>
+              )
+            </li>
+            <li>
+              Get Started with Reason - (
+              <a
+                href="https://twitter.com/nikgraf"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                Nik Graf
+              </a>
+              )
+            </li>
+            <li>
+              Using WebAssembly with Rust - (
+              <a
+                href="https://twitter.com/nikgraf"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                Nik Graf
+              </a>
+              )
+            </li>
+          </ul>
+        </ItemSubSectionList>
+      </ItemSubSection>
+      <ItemSubSection>
+        <ItemSubSectionHeading>
+          <h4>
+            <span>Lynda.com (now LinkedIn Learning)</span> - (
+            <a
+              href="https://www.lynda.com/"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              https://www.lynda.com
+            </a>
+            )
+          </h4>
+          <span>2015 - 2017</span>
+        </ItemSubSectionHeading>
+        <ItemSubSectionList>
+          <ul>
+            <li>
+              Web Development Foundations: Web Technologies - (
+              <a
+                href="https://twitter.com/jameswillweb"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                James Williamson
+              </a>
+              )
+            </li>
+            <li>
+              HTML Essential Training - (
+              <a
+                href="https://twitter.com/jameswillweb"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                James Williamson
+              </a>
+              )
+            </li>
+            <li>
+              CSS Essential Training - (
+              <a
+                href="https://twitter.com/christinatruong"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                Christina Truong
+              </a>
+              )
+            </li>
+            <li>
+              JavaScript Essential Training - (
+              <a
+                href="https://twitter.com/mor10"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                Morten Rand-Hendriksen
+              </a>
+              )
+            </li>
+            <li>
+              Node.js Essential Training - (
+              <a
+                href="https://twitter.com/moontahoe"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                Alex Banks
+              </a>
+              )
+            </li>
+            <li>
+              Learning Git and GitHub - (
+              <a
+                href="https://twitter.com/planetoftheweb"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                Ray Villalobos
+              </a>
+              )
+            </li>
+            <li>
+              React.js Essential Training - (
+              <a
+                href="https://twitter.com/eveporcello"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                Eve Porcello
+              </a>
+              )
+            </li>
+          </ul>
+        </ItemSubSectionList>
+      </ItemSubSection>
+      <ItemHeading
+        style={{
+          marginTop: "25px"
+        }}
+      >
+        <div>
+          <h4>Podcasts</h4>
+          <span>(2017 - Present)</span>
+        </div>
+      </ItemHeading>
+      <ItemSubSection>
+        <ItemSubSectionHeading>
+          <h4>
+            <span>Syntax</span> - (
+            <a
+              href="https://syntax.fm/"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              https://syntax.fm
+            </a>
+            )
+          </h4>
+        </ItemSubSectionHeading>
+      </ItemSubSection>
+      <ItemSubSection>
+        <ItemSubSectionHeading>
+          <h4>
+            <span>Late Night Linux</span> - (
+            <a
+              href="https://latenightlinux.com/"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              https://latenightlinux.com
+            </a>
+            )
+          </h4>
+        </ItemSubSectionHeading>
+      </ItemSubSection>
+    </Item>
+  </Section>
+);
+
+const InterestsSection = () => (
+  <Section>
+    <h3>Interests</h3>
+    <Item>
+      <ItemSubSection>
+        <ItemSubSectionList>
+          <ul>
+            <li>FOSS (Free and Open Source Software)</li>
+            <li>Linux and Related Projects</li>
+            <li>Programming Language Design</li>
+            <li>Computer Hardware</li>
+            <li>PC + Console Gaming</li>
+            <li>Hip-Hop Music</li>
+            <li>Streetwear Fashion</li>
+            <li>Politics</li>
+            <li>Cycling</li>
           </ul>
         </ItemSubSectionList>
       </ItemSubSection>
@@ -411,6 +843,15 @@ const ItemSubSectionList = styled.div`
         font-weight: bold;
 
         min-width: 30px;
+      }
+
+      a {
+        color: #9b9b9b;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: black;
+        }
       }
     }
   }

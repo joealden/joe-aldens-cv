@@ -19,8 +19,6 @@ html {
 
 body {
   margin: 0;
-  overflow-y: scroll;
-  overflow-x: hidden;
 }
 
 h1,
@@ -31,6 +29,13 @@ h5,
 h6 {
   font-weight: normal;
   margin: 0;
+}
+
+/* Remove link underlines when printing */
+@media print {
+  a {
+    text-decoration: none !important;
+  }
 }
 `;
 
