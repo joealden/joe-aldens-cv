@@ -1,0 +1,30 @@
+{
+  "name": "listed",
+  "description": "Design inspiration / resource site",
+  "author": "Joe Alden <me@joealden.com> (joealden.com)",
+  "version": "0.1.0",
+  "license": "MIT",
+  "private": true,
+  "homepage": "https://github.com/joealden/joe-aldens-cv",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joealden/joe-aldens-cv.git"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "dev": "gatsby develop"
+  },
+  "dependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "styled-components": "^4.1.3"
+  },
+  "devDependencies": {
+    "gatsby": "^2.0.98",
+    "gatsby-plugin-manifest": "^2.0.13",
+    "gatsby-plugin-netlify": "^2.0.7",
+    "gatsby-plugin-robots-txt": "^1.4.0",
+    "gatsby-plugin-sitemap": "^2.0.4",
+    "gatsby-plugin-styled-components": "^3.0.4"
+  }
+}
