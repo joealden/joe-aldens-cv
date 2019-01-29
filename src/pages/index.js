@@ -25,6 +25,7 @@ const CV = () => (
         <PageNumber>2</PageNumber>
         <MainContent>
           <Header />
+          <PersonalProjectsContinuedSection />
           <SelfStudySection />
           <InterestsSection />
         </MainContent>
@@ -218,9 +219,38 @@ const ProfessionalExperienceSection = () => (
         </ItemSubSectionHeading>
         <ItemSubSectionList>
           <ul>
-            <li>What I did</li>
-            <li>What I did</li>
-            <li>What I did</li>
+            <li>
+              Generated the site statically for improved SEO and faster load
+              times.
+            </li>
+            <li>Automated rebuilding of the site when CMS data changes.</li>
+            <li>
+              Achieved perfect lighthouse scores (100/100) in Performance,
+              Accessibility, Best Practices and SEO.
+            </li>
+            <li>
+              Implemented a native like navigation experience on mobile using
+              the HTML5 History API.
+            </li>
+            <li>
+              Seperated the mobile and desktop component trees for increased
+              readability and maintainability.
+            </li>
+            <li>
+              Lazy loaded post images that are below the fold, using inlined
+              base64 versions of the images before the full size images are
+              loaded, then using the 'blur up' technique to switch between them.
+            </li>
+            <li>
+              Conditionally used the WebP image format if the user's browser
+              supports it. For browsers that do support it, image sizes are
+              reduced significantly, resulting in faster load times.
+            </li>
+            <li>
+              Created automated tests for utility logic to reduce the chance of
+              bugs entering production. These tests are ran in CI (Continious
+              Intergration) and will halt the build if they fail.
+            </li>
           </ul>
         </ItemSubSectionList>
       </ItemSubSection>
@@ -241,9 +271,17 @@ const ProfessionalExperienceSection = () => (
         </ItemSubSectionHeading>
         <ItemSubSectionList>
           <ul>
-            <li>What I did</li>
-            <li>What I did</li>
-            <li>What I did</li>
+            <li>Cleaned up and organised the Shopify backend.</li>
+            <li>Restyled the site to better reflect the Umoro brand.</li>
+            <li>
+              Improved loading times and reduced bounce rate by removing
+              unnecessary CSS and JavaScript.
+            </li>
+            <li>Implemented 'Reviews' and 'Size Guide' functionality.</li>
+            <li>
+              Simplified the path to purchase by adding 'New Arrivals' section
+              to homepage and 'You May Also Like' section to product pages.
+            </li>
           </ul>
         </ItemSubSectionList>
       </ItemSubSection>
@@ -372,12 +410,36 @@ const PersonalProjectsSection = () => (
         </ItemSubSectionHeading>
         <ItemSubSectionList>
           <ul>
-            <li>What I did</li>
-            <li>What I did</li>
-            <li>What I did</li>
+            <li>
+              Implemented both the front-end and the back-end in TypeScript
+            </li>
+            <li>Used a GraphQL interface to expose the API data.</li>
+            <li>
+              Implemented real time functionality, meaning that the user's page
+              is updated automatically if they recieve a new message or another
+              user creates a chat with them in it.
+            </li>
+            <li>
+              Created sign up and sign in flows using httpOnly cookies for
+              improved session security compared to localStorage.
+            </li>
+            <li>
+              Deployed both services to Zeit Now, allowing for easy scaling of
+              both the web application and the API server.
+            </li>
           </ul>
         </ItemSubSectionList>
       </ItemSubSection>
+    </Item>
+  </Section>
+);
+
+/* ------------------------------ Page 2 -------------------------- */
+
+const PersonalProjectsContinuedSection = () => (
+  <Section>
+    <h3>Personal Projects (Continued)</h3>
+    <Item>
       <ItemSubSection>
         <ItemSubSectionHeading>
           <h4>
@@ -395,9 +457,10 @@ const PersonalProjectsSection = () => (
         </ItemSubSectionHeading>
         <ItemSubSectionList>
           <ul>
-            <li>What I did</li>
-            <li>What I did</li>
-            <li>What I did</li>
+            <li>
+              Created a tool that speeds up my CSS development process when
+              working on responsive layouts.
+            </li>
           </ul>
         </ItemSubSectionList>
       </ItemSubSection>
@@ -418,7 +481,11 @@ const PersonalProjectsSection = () => (
         </ItemSubSectionHeading>
         <ItemSubSectionList>
           <ul>
-            <li>What I did</li>
+            <li>
+              Implemented the front-end using Nuxt.js in SSR (Server Side
+              Rendering) mode. This allows for dynamic page routes while
+              maintaining good SEO.
+            </li>
             <li>What I did</li>
             <li>What I did</li>
           </ul>
@@ -427,8 +494,6 @@ const PersonalProjectsSection = () => (
     </Item>
   </Section>
 );
-
-/* ------------------------------ Page 2 -------------------------- */
 
 const SelfStudySection = () => (
   <Section>
@@ -835,7 +900,7 @@ const ItemSubSectionHeading = styled.div`
 const ItemSubSectionList = styled.div`
   ul {
     list-style: square;
-    margin: 10px 0 0 0;
+    margin: 10px 200px 0 0;
 
     li {
       span {
