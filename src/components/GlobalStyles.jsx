@@ -7,6 +7,7 @@ const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
   font-family: inherit;
   font-size: inherit;
+  line-height: 130%;
 }
 
 html {
