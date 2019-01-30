@@ -11,10 +11,11 @@ module.exports = {
       resolve: "gatsby-plugin-manifest",
       options: {
         name: "Joe Alden's CV",
-        short_name: "Joe Alden's CV",
+        short_name: "Joe's CV",
         start_url: "/",
         background_color: "#663399",
-        theme_color: "#663399"
+        theme_color: "#663399",
+        display: "browser"
       }
     },
     "gatsby-plugin-netlify"
