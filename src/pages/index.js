@@ -481,13 +481,16 @@ const PersonalProjectsContinuedSection = () => (
         </ItemSubSectionHeading>
         <ItemSubSectionList>
           <ul>
+            <li>Achieved near perfect scores (96+) in all Lighthouse tests.</li>
             <li>
               Implemented the front-end using Nuxt.js in SSR (Server Side
               Rendering) mode. This allows for dynamic page routes while
-              maintaining good SEO.
+              maintaining good SEO (which is required for a site like this).
             </li>
-            <li>What I did</li>
-            <li>What I did</li>
+            <li>
+              Used the 'Zeit Now + Github' intergration to automatically
+              redeploy the services when commits are made to the master branch.
+            </li>
           </ul>
         </ItemSubSectionList>
       </ItemSubSection>
