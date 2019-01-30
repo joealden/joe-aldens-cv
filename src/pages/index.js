@@ -271,7 +271,7 @@ const ProfessionalExperienceSection = () => (
         </ItemSubSectionHeading>
         <ItemSubSectionList>
           <ul>
-            <li>Cleaned up and organised the Shopify backend.</li>
+            <li>Cleaned up and organised the Shopify back-end.</li>
             <li>Restyled the site to better reflect the Umoro brand.</li>
             <li>
               Improved loading times and reduced bounce rate by removing
