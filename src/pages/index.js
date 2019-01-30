@@ -233,7 +233,7 @@ const ProfessionalExperienceSection = () => (
               the HTML5 History API.
             </li>
             <li>
-              Seperated the mobile and desktop component trees for increased
+              Separated the mobile and desktop component trees for increased
               readability and maintainability.
             </li>
             <li>
@@ -248,8 +248,8 @@ const ProfessionalExperienceSection = () => (
             </li>
             <li>
               Created automated tests for utility logic to reduce the chance of
-              bugs entering production. These tests are ran in CI (Continious
-              Intergration) and will halt the build if they fail.
+              bugs entering production. These tests are ran in CI (Continuous
+              Integration) and will halt the build if they fail.
             </li>
           </ul>
         </ItemSubSectionList>
@@ -344,7 +344,7 @@ const EducationSection = () => (
             </li>
             <li>
               <span>A*</span>
-              Religous Studies
+              Religious Studies
             </li>
             <li>
               <span>A</span>
@@ -416,7 +416,7 @@ const PersonalProjectsSection = () => (
             <li>Used a GraphQL interface to expose the API data.</li>
             <li>
               Implemented real time functionality, meaning that the user's page
-              is updated automatically if they recieve a new message or another
+              is updated automatically if they receive a new message or another
               user creates a chat with them in it.
             </li>
             <li>
@@ -488,8 +488,8 @@ const PersonalProjectsContinuedSection = () => (
               maintaining good SEO (which is required for a site like this).
             </li>
             <li>
-              Used the 'Zeit Now + Github' intergration to automatically
-              redeploy the services when commits are made to the master branch.
+              Used the 'Zeit Now + Github' integration to automatically redeploy
+              the services when commits are made to the master branch.
             </li>
           </ul>
         </ItemSubSectionList>
