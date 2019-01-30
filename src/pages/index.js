@@ -220,8 +220,7 @@ const ProfessionalExperienceSection = () => (
         <ItemSubSectionList>
           <ul>
             <li>
-              Generated the site statically for improved SEO and faster load
-              times.
+              Generated statically for improved SEO and faster load times.
             </li>
             <li>Automated rebuilding of the site when CMS data changes.</li>
             <li>
@@ -411,7 +410,7 @@ const PersonalProjectsSection = () => (
         <ItemSubSectionList>
           <ul>
             <li>
-              Implemented both the front-end and the back-end in TypeScript
+              Implemented both the front-end and the back-end in TypeScript.
             </li>
             <li>Used a GraphQL interface to expose the API data.</li>
             <li>
@@ -421,7 +420,8 @@ const PersonalProjectsSection = () => (
             </li>
             <li>
               Created sign up and sign in flows using httpOnly cookies for
-              improved session security compared to localStorage.
+              improved session security compared to storing tokens in
+              localStorage.
             </li>
             <li>
               Deployed both services to Zeit Now, allowing for easy scaling of
