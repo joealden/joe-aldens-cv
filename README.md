@@ -1,6 +1,5 @@
-# joe-aldens-cv
-
-My CV.
+<h1 align="center">Joe Alden's CV</h1>
+<p align="center">My CV.</p>
 
 ## Print / Generate PDF
 
